@@ -1,0 +1,2 @@
+export const DUMMY_API_REQUEST = "DUMMY_API_REQUEST";
+export type DUMMY_API_REQUEST = typeof DUMMY_API_REQUEST;
