@@ -33,7 +33,7 @@
   "scripts": {
     "start": "cross-env BROWSER=none react-scripts start",
     "electron": "electron public/electron.js",
-    "electron-dev": "concurrently \"yarn start\" \"yarn electron\"",
+    "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && yarn electron\"",
     "build": "react-scripts build",
     "prepackage": "rm -rf build && rm -rf dist && yarn build && mv build dist && cp ../backend/dist/app.exe dist/",
     "package": "electron-builder build --win -c.extraMetadata.main=dist/electron.js --publish never",
@@ -66,6 +66,7 @@
     "cross-env": "^7.0.2",
     "electron": "^9.0.5",
     "electron-builder": "^22.7.0",
-    "electron-devtools-installer": "^3.0.0"
+    "electron-devtools-installer": "^3.0.0",
+    "wait-on": "^5.0.1"
   }
 }

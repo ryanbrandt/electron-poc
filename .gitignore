@@ -10,8 +10,10 @@ node_modules
 
 # production
 dist
-buil
+build
 app.spec
+
+__pycache__
 
 # misc
 .DS_Store
