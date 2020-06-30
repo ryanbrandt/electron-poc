@@ -35,7 +35,7 @@
     "electron": "electron public/electron.js",
     "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && yarn electron\"",
     "build": "react-scripts build",
-    "prepackage": "rm -rf build && rm -rf dist && yarn build && mv build dist && cp ../backend/dist/app.exe dist/",
+    "prepackage": "rm -rf dist && yarn build && mv build dist && cp ../backend/dist/app.exe dist/",
     "package": "electron-builder build --win -c.extraMetadata.main=dist/electron.js --publish never",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
