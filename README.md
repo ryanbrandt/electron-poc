@@ -1,6 +1,23 @@
 # Development
 
-Make sure you are in `bio-local-mode` or `bio-dev-mode`
+Make sure you are in `bio-local-mode` or `bio-dev-mode` and have added:
+
+```
+export FLASK_ENV=development
+...
+
+[bio-local-mode]
+export BIO_MODE=LOCAL
+
+...
+
+[bio-dev-mode]
+export BIO_MODE=DEV
+
+...
+```
+
+to your bashrc for both modes
 
 - `cd backend && pipenv install`
 - `cd frontend && yarn install && yarn electron-dev`
@@ -26,7 +43,7 @@ Make sure you are in `bio-release-mode`
 - `cd backend && pipenv build`
 - `cd frontend && yarn package`
 
-`pipenv build` will generate compile the flask API into an executable.
+`pipenv build` will compile the flask API into an executable.
 
 `yarn package` will build the react project, shift files around directories as necessary and build the electron project with `electron-builder`
 
