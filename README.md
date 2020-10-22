@@ -1,23 +1,20 @@
 # Development
 
-Make sure you are in `bio-local-mode` or `bio-dev-mode` and have added:
-
+Inject staging variables
 ```
 export FLASK_ENV=development
 ...
 
-[bio-local-mode]
+[local-mode]
 export BIO_MODE=LOCAL
 
 ...
 
-[bio-dev-mode]
+[dev-mode]
 export BIO_MODE=DEV
 
 ...
 ```
-
-to your bashrc for both modes
 
 - `cd backend && pipenv install`
 - `cd frontend && yarn install && yarn electron-dev`
@@ -38,7 +35,7 @@ Once everything is running, changes to both backend and frontend can be made and
 
 # Distribution
 
-Make sure you are in `bio-release-mode`
+Make sure you are in appropriate staging
 
 - `cd backend && pipenv build`
 - `cd frontend && yarn package`
